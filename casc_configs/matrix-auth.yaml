@@ -1,0 +1,6 @@
+jenkins:
+  authorizationStrategy:
+    globalMatrix:
+      grantedPermissions:
+        - "Overall/Read:anonymous"
+        - "Overall/Administer:authenticated"

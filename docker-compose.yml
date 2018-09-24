@@ -1,0 +1,25 @@
+version: '3.6'
+
+services:
+  jenkins:
+    build:
+      dockerfile: jenkins/Dockerfile
+      context: .
+    restart: always
+    ports:
+      - 8080
+      - 50000
+    volumes:
+      - jenkins-home:/var/jenkins_home
+    secrets:
+      - bitbucket_oauth_client_id
+      - bitbucket_oauth_secret
+
+volumes:
+  jenkins-home:
+
+secrets:
+  bitbucket_oauth_client_id:
+    file: ./secrets/bitbucket_oauth_client_id
+  bitbucket_oauth_secret:
+    file: ./secrets/bitbucket_oauth_secret
