@@ -7,7 +7,7 @@ services:
       context: .
     restart: always
     ports:
-      - 8080
+      - "9876:8080"
       - 50000
     volumes:
       - jenkins-home:/var/jenkins_home
