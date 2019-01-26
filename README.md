@@ -14,3 +14,9 @@ Once you have your client_id and secret, copy `secrets/bitbucket_oauth_client_id
 ```
   docker-compose up -d
 ```
+
+If you make changes to the dockerfile you must rebuild your docker image by doing:
+
+```
+  docker-compose build --pull
+```
